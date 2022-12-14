@@ -7,6 +7,7 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
+const deleteWorkoutsBtn = document.querySelector(`.btn--trash`);
 
 class Workout {
   date = new Date();
@@ -81,6 +82,7 @@ class App {
     form.addEventListener(`submit`, this._newWorkout.bind(this));
     inputType.addEventListener(`change`, this._toggleElevationField);
     containerWorkouts.addEventListener(`click`, this._moveToPopup.bind(this));
+    deleteWorkoutsBtn.addEventListener(`click`, this.reset);
   }
 
   _getPosition() {

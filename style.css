@@ -47,6 +47,20 @@ a:visited {
   padding: 3rem 5rem 4rem 5rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.btn--trash {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn--trash:hover {
+  color: var(--color-brand--2);
 }
 
 .logo {
